@@ -51,7 +51,6 @@ try {
     Set-AppLockerPolicy -XmlPolicy $appLockerXmlPath -Merge -ErrorAction Stop
     
     Write-Host "Ensuring Application Identity Service (AppIDSvc) is active..." -ForegroundColor Yellow
-    Set-Service AppIDSvc -StartupType Automatic
     Start-Service AppIDSvc -ErrorAction SilentlyContinue
     
     Write-Host "`n=== SUCCESS! ===" -ForegroundColor Green
